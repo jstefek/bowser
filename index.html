@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://unpkg.com/bowser@2.4.0/es5.js"></script>
+</head>
+<body>
+<div id="name"></div>
+<div id="version"></div>
+<div id="os"></div>
+
+<script type="text/javascript">
+    const result = bowser.getParser(window.navigator.userAgent);
+    document.getElementById('name').innerText = result.parsedResult.browser.name;
+    document.getElementById('version').innerText = result.parsedResult.browser.version;
+    document.getElementById('os').innerText = result.parsedResult.os.name;
+</script>
+
+</body>
+</html>
